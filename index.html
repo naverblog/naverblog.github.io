@@ -2,15 +2,27 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>거래 내역 및 후기</title>
-  <style>
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background: #fff;
-      padding: 0;
-      margin: 0;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="hZ8QKgMMOV6cQIS8ON8SBkxKbCrO80SxUdFIPYK-UrI" />
 
+  <title>네이버 블로그 광고 대행 | 블로그 매입, 구매, 판매 전문</title>
+
+  <!-- SEO 핵심 메타 태그 -->
+  <meta name="description" content="네이버 블로그 광고 대행 전문. 블로그 매입, 블로그 판매, 블로그 포스팅 예시 및 광고 단가 정보 제공. 카카오톡 상담 가능.">
+  <meta name="keywords" content="블로그 매입, 블로그 구매, 블로그 판매, 블로그 팝니다, 블로그 삽니다, 네이버 블로그, 네이버 블로그 구매, 네이버 블로그 매입, 네이버 블로그 판매, 네이버 블로그 팝니다, 네이버 블로그 삽니다, 네이버 블로그 광고 대행">
+  <meta name="author" content="naverblog">
+
+  <!-- Open Graph (SNS 공유 최적화) -->
+  <meta property="og:title" content="네이버 블로그 광고 대행 | 블로그 매입 & 판매 전문">
+  <meta property="og:description" content="블로그 광고 수익을 높이는 가장 빠른 방법! 블로그 매입/판매/광고 운영 대행 전문 상담">
+  <meta property="og:url" content="https://naverblog.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://naverblog.github.io/images/og-image.jpg">
+
+  <!-- 파비콘 및 스타일 -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
     .section {
       margin: 40px auto;
       max-width: 500px;
@@ -50,6 +62,17 @@
       background-color: #fff;
     }
 
+    .scroll-item .masked-name {
+      display: inline-block;
+      width: 40px;
+      text-align: center;
+    }
+
+    .scroll-item .price {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
     @keyframes scroll-up {
       0% {
         transform: translateY(0);
@@ -60,47 +83,172 @@
     }
   </style>
 </head>
+
 <body>
+    <header>
+        <h1>네이버 블로그 광고 대행</h1>
+        <nav>
+            <ul>
+                <li><a href="#page1">블로그 포스팅 예시</a></li>
+                <li><a href="#page2">거래 내역</a></li>
+                <li><a href="#contact">문의</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- 거래 내역 섹션 -->
-  <div class="section">
-    <h2>💼 실제 광고 등록 거래 내역입니다.</h2>
-    <div class="scroll-container">
-      <div class="scroll-list" id="dealList">
-        <!-- 거래 내역 항목 (예시) -->
-        <div class="scroll-item">[2025-05-23] 블로그 1건 등록 - 55,000원</div>
-        <div class="scroll-item">[2025-05-22] 블로그 2건 등록 - 110,000원</div>
-        <div class="scroll-item">[2025-05-21] 블로그 3건 등록 - 165,000원</div>
-        <div class="scroll-item">[2025-05-20] 블로그 1건 등록 - 55,000원</div>
-        <div class="scroll-item">[2025-05-19] 블로그 5건 등록 - 275,000원</div>
-      </div>
-    </div>
-  </div>
+    <!-- 블로그 포스팅 예시 + 카톡 대화 내용 -->
+    <section id="page1">
+        <h2>블로그 포스팅 예시</h2>
+        <p>여기에는 네이버 블로그 포스팅 예시가 들어갑니다.</p>
 
-  <!-- 후기 섹션 -->
-  <div class="section">
-    <h2>📝 광고주분들의 솔직한 후기입니다.</h2>
-    <div class="scroll-container">
-      <div class="scroll-list" id="reviewList">
-        <!-- 후기 항목 (예시) -->
-        <div class="scroll-item">"광고 맡기고 일주일 만에 매출이 눈에 띄게 올랐어요!"</div>
-        <div class="scroll-item">"포스팅 퀄리티도 좋고, 상담도 빠릅니다."</div>
-        <div class="scroll-item">"2번째 의뢰인데 이번에도 매우 만족합니다!"</div>
-        <div class="scroll-item">"처음엔 반신반의했는데 진짜 효과 있네요."</div>
-        <div class="scroll-item">"앞으로도 쭉 맡기고 싶어요. 강력 추천!"</div>
-      </div>
-    </div>
-  </div>
+        <h2>카카오톡 대화 내용</h2>
+        <p>여기에는 카카오톡 대화 예시가 들어갑니다.</p>
+    </section>
 
-  <script>
-    // 거래 내역 리스트 복제
-    const dealList = document.getElementById('dealList');
-    dealList.innerHTML += dealList.innerHTML;
+    <!-- 거래 내역 + 후기 슬라이드 -->
+    <section id="page2">
+        <h2>거래 내역</h2>
+        <div class="scroll-container">
+          <div class="scroll-list" id="dealList">
+            <!-- 거래 내역 항목 (예시) -->
+            <div class="scroll-item">
+              <span>[2025-05-23]</span> 
+              <span><span class="masked-name">김*수</span></span> | 
+              <span>1건 (1주)</span> | 
+              <span class="price">220,000원</span>
+            </div>
+            <div class="scroll-item">
+              <span>[2025-05-22]</span> 
+              <span><span class="masked-name">이*민</span></span> | 
+              <span>1개월 (6회)</span> | 
+              <span class="price">1,200,000원</span>
+            </div>
+            <div class="scroll-item">
+              <span>[2025-05-21]</span> 
+              <span><span class="masked-name">박*정</span></span> | 
+              <span>3개월 (18회)</span> | 
+              <span class="price">3,300,000원</span>
+            </div>
+            <div class="scroll-item">
+              <span>[2025-05-20]</span> 
+              <span><span class="masked-name">정*기</span></span> | 
+              <span>6개월 (36회)</span> | 
+              <span class="price">6,000,000원</span>
+            </div>
+            <div class="scroll-item">
+              <span>[2025-05-19]</span> 
+              <span><span class="masked-name">최*린</span></span> | 
+              <span>1년 (72회)</span> | 
+              <span class="price">11,000,000원</span>
+            </div>
+          </div>
+        </div>
 
-    // 후기 리스트 복제
-    const reviewList = document.getElementById('reviewList');
-    reviewList.innerHTML += reviewList.innerHTML;
-  </script>
+        <h2>후기 슬라이드</h2>
+        <div class="scroll-container">
+          <div class="scroll-list" id="reviewList">
+            <!-- 후기 항목 (예시) -->
+            <div class="scroll-item">
+              <span><span class="masked-name">김*진</span></span> | 
+              <span>한식</span> | 
+              <span>"광고 맡기고 일주일 만에 매출이 눈에 띄게 올랐어요!"</span>
+            </div>
+            <div class="scroll-item">
+              <span><span class="masked-name">이*영</span></span> | 
+              <span>양식</span> | 
+              <span>"포스팅 퀄리티도 좋고, 상담도 빠릅니다."</span>
+            </div>
+            <div class="scroll-item">
+              <span><span class="masked-name">박*선</span></span> | 
+              <span>일식</span> | 
+              <span>"2번째 의뢰인데 이번에도 매우 만족합니다!"</span>
+            </div>
+            <div class="scroll-item">
+              <span><span class="masked-name">정*희</span></span> | 
+              <span>커피숍</span> | 
+              <span>"처음엔 반신반의했는데 진짜 효과 있네요."</span>
+            </div>
+            <div class="scroll-item">
+              <span><span class="masked-name">최*영</span></span> | 
+              <span>패스트푸드</span> | 
+              <span>"앞으로도 쭉 맡기고 싶어요. 강력 추천!"</span>
+            </div>
+          </div>
+        </div>
+    </section>
 
+    <section id="growth-graph" style="padding: 40px 20px; background: #f9f9f9;">
+      <h2 style="text-align:center; font-size: 28px; margin-bottom: 20px;">📈 광고 후 평균 매출 2.3배 이상 증가</h2>
+      <canvas id="salesChart" width="400" height="200"></canvas>
+    </section>
+
+    <section id="pricing-table" style="padding: 40px 20px; background: #fff;">
+      <h2 style="text-align:center; font-size: 28px; margin-bottom: 20px;">💰 광고 단가 안내</h2>
+      <table style="width: 100%; max-width: 600px; margin: auto; border-collapse: collapse; font-size: 18px;">
+        <thead>
+          <tr style="background-color: #4CAF50; color: white;">
+            <th style="padding: 12px; border: 1px solid #ddd;">상품</th>
+            <th style="padding: 12px; border: 1px solid #ddd;">횟수</th>
+            <th style="padding: 12px; border: 1px solid #ddd;">가격</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">단발성 1회</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">1회</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">220,000원</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">1개월</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">6회</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">1,200,000원</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">3개월</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">18회</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">3,300,000원</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">6개월</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">36회</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">6,000,000원</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">1년</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">72회</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">11,000,000원</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer id="contact">
+        <p>문의: <a href="tel:+82-10-1234-5678">010-1234-5678</a> | 카카오톡 상담: <a href="https://open.kakao.com/o/gklb1whc">카카오톡 상담 바로가기</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1개월 전', '광고 후 1개월', '광고 후 3개월', '광고 후 6개월'],
+                datasets: [{
+                    label: '평균 매출 증가',
+                    data: [3000000, 5000000, 7500000, 8000000],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
