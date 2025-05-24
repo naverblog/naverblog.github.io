@@ -2,139 +2,105 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="hZ8QKgMMOV6cQIS8ON8SBkxKbCrO80SxUdFIPYK-UrI" />
+  <title>거래 내역 및 후기</title>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #fff;
+      padding: 0;
+      margin: 0;
+    }
 
-  <title>네이버 블로그 광고 대행 | 블로그 매입, 구매, 판매 전문</title>
+    .section {
+      margin: 40px auto;
+      max-width: 500px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fdfdfd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
 
-  <!-- SEO 핵심 메타 태그 -->
-  <meta name="description" content="네이버 블로그 광고 대행 전문. 블로그 매입, 블로그 판매, 블로그 포스팅 예시 및 광고 단가 정보 제공. 카카오톡 상담 가능.">
-  <meta name="keywords" content="블로그 매입, 블로그 구매, 블로그 판매, 블로그 팝니다, 블로그 삽니다, 네이버 블로그, 네이버 블로그 구매, 네이버 블로그 매입, 네이버 블로그 판매, 네이버 블로그 팝니다, 네이버 블로그 삽니다, 네이버 블로그 광고 대행">
-  <meta name="author" content="naverblog">
+    .section h2 {
+      margin: 0;
+      padding: 16px;
+      background: #f4f4f4;
+      font-size: 18px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+    }
 
-  <!-- Open Graph (SNS 공유 최적화) -->
-  <meta property="og:title" content="네이버 블로그 광고 대행 | 블로그 매입 & 판매 전문">
-  <meta property="og:description" content="블로그 광고 수익을 높이는 가장 빠른 방법! 블로그 매입/판매/광고 운영 대행 전문 상담">
-  <meta property="og:url" content="https://naverblog.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://naverblog.github.io/images/og-image.jpg"> <!-- 이미지 경로 직접 변경 가능 -->
+    .scroll-container {
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+    }
 
-  <!-- 파비콘 및 스타일 -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-</head>
+    .scroll-list {
+      display: flex;
+      flex-direction: column;
+      animation: scroll-up 30s linear infinite;
+    }
 
-<body>
-    <header>
-        <h1>네이버 블로그 광고 대행</h1>
-        <nav>
-            <ul>
-                <li><a href="#page1">블로그 포스팅 예시</a></li>
-                <li><a href="#page2">거래 내역</a></li>
-                <li><a href="#contact">문의</a></li>
-            </ul>
-        </nav>
-    </header>
+    .scroll-item {
+      padding: 12px 20px;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      color: #333;
+      background-color: #fff;
+    }
 
-    <!-- 블로그 포스팅 예시 + 카톡 대화 내용 -->
-    <section id="page1">
-        <h2>블로그 포스팅 예시</h2>
-        <p>여기에는 네이버 블로그 포스팅 예시가 들어갑니다.</p>
-
-        <h2>카카오톡 대화 내용</h2>
-        <p>여기에는 카카오톡 대화 예시가 들어갑니다.</p>
-    </section>
-
-    <!-- 거래 내역 + 후기 슬라이드 -->
-    <section id="page2">
-        <h2>거래 내역</h2>
-        <p>여기에는 거래 내역이 들어갑니다.</p>
-
-        <h2>후기 슬라이드</h2>
-        <p>여기에는 거래 후기가 슬라이드 형태로 보여집니다.</p>
-    </section>
-
-<section id="growth-graph" style="padding: 40px 20px; background: #f9f9f9;">
-  <h2 style="text-align:center; font-size: 28px; margin-bottom: 20px;">📈 광고 후 평균 매출 2.3배 이상 증가</h2>
-  <canvas id="salesChart" width="400" height="200"></canvas>
-</section>
-
-<section id="pricing-table" style="padding: 40px 20px; background: #fff;">
-  <h2 style="text-align:center; font-size: 28px; margin-bottom: 20px;">💰 광고 단가 안내</h2>
-  <table style="width: 100%; max-width: 600px; margin: auto; border-collapse: collapse; font-size: 18px;">
-    <thead>
-      <tr style="background-color: #4CAF50; color: white;">
-        <th style="padding: 12px; border: 1px solid #ddd;">상품</th>
-        <th style="padding: 12px; border: 1px solid #ddd;">횟수</th>
-        <th style="padding: 12px; border: 1px solid #ddd;">가격</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding: 12px; border: 1px solid #ddd;">단발성 1회</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">1회</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">220,000원</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border: 1px solid #ddd;">1개월</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">6회</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">1,200,000원</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border: 1px solid #ddd;">3개월</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">18회</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">3,300,000원</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border: 1px solid #ddd;">6개월</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">36회</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">6,000,000원</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border: 1px solid #ddd;">1년</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">72회</td>
-        <td style="padding: 12px; border: 1px solid #ddd;">11,000,000원</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-    <!-- 고정된 우측 상단 연락처, 카카오톡 아이디, 문의 버튼 -->
-    <div class="fixed-contact">
-        <p>연락처: 010-xxxx-xxxx</p>
-        <p>카카오톡 아이디: @xxxx</p>
-        <a href="https://open.kakao.com/o/sVxkF2xh" target="_blank">문의하기</a>
-    </div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  const ctx = document.getElementById('salesChart').getContext('2d');
-  const salesChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['광고 전', '광고 후'],
-      datasets: [{
-        label: '매출 변화',
-        data: [100, 230], // 2.3배 증가
-        backgroundColor: ['#ff6384', '#36a2eb'],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        y: {
-          beginAtZero: true,
-          ticks: {
-            callback: function(value) {
-              return value + '%';
-            }
-          }
-        }
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
       }
     }
-  });
-</script>
+  </style>
+</head>
+<body>
+
+  <!-- 거래 내역 섹션 -->
+  <div class="section">
+    <h2>💼 실제 광고 등록 거래 내역입니다.</h2>
+    <div class="scroll-container">
+      <div class="scroll-list" id="dealList">
+        <!-- 거래 내역 항목 (예시) -->
+        <div class="scroll-item">[2025-05-23] 블로그 1건 등록 - 55,000원</div>
+        <div class="scroll-item">[2025-05-22] 블로그 2건 등록 - 110,000원</div>
+        <div class="scroll-item">[2025-05-21] 블로그 3건 등록 - 165,000원</div>
+        <div class="scroll-item">[2025-05-20] 블로그 1건 등록 - 55,000원</div>
+        <div class="scroll-item">[2025-05-19] 블로그 5건 등록 - 275,000원</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 후기 섹션 -->
+  <div class="section">
+    <h2>📝 광고주분들의 솔직한 후기입니다.</h2>
+    <div class="scroll-container">
+      <div class="scroll-list" id="reviewList">
+        <!-- 후기 항목 (예시) -->
+        <div class="scroll-item">"광고 맡기고 일주일 만에 매출이 눈에 띄게 올랐어요!"</div>
+        <div class="scroll-item">"포스팅 퀄리티도 좋고, 상담도 빠릅니다."</div>
+        <div class="scroll-item">"2번째 의뢰인데 이번에도 매우 만족합니다!"</div>
+        <div class="scroll-item">"처음엔 반신반의했는데 진짜 효과 있네요."</div>
+        <div class="scroll-item">"앞으로도 쭉 맡기고 싶어요. 강력 추천!"</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 거래 내역 리스트 복제
+    const dealList = document.getElementById('dealList');
+    dealList.innerHTML += dealList.innerHTML;
+
+    // 후기 리스트 복제
+    const reviewList = document.getElementById('reviewList');
+    reviewList.innerHTML += reviewList.innerHTML;
+  </script>
 
 </body>
 </html>
