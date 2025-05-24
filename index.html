@@ -22,19 +22,81 @@
   <!-- 파비콘 및 스타일 -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .section {
+      margin: 40px auto;
+      max-width: 500px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fdfdfd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      margin: 0;
+      padding: 16px;
+      background: #f4f4f4;
+      font-size: 18px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .scroll-container {
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scroll-list {
+      display: flex;
+      flex-direction: column;
+      animation: scroll-up 30s linear infinite;
+    }
+
+    .scroll-item {
+      padding: 12px 20px;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      color: #333;
+      background-color: #fff;
+    }
+
+    .scroll-item .masked-name {
+      display: inline-block;
+      width: 40px;
+      text-align: center;
+    }
+
+    .scroll-item .price {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <h1>네이버 블로그 광고 대행</h1>
-        <nav>
-            <ul>
-                <li><a href="#page1">블로그 포스팅 예시</a></li>
-                <li><a href="#page2">거래 내역</a></li>
-                <li><a href="#contact">문의</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1>네이버 블로그 광고 대행</h1>
+    <nav>
+        <ul>
+            <li><a href="#page1">블로그 포스팅 예시</a></li>
+            <li><a href="#page2">거래 내역</a></li>
+            <li><a href="#contact">문의</a></li>
+        </ul>
+    </nav>
+</header>
+
+
 
     <!-- 블로그 포스팅 예시 + 카톡 대화 내용 -->
     <section id="page1">
