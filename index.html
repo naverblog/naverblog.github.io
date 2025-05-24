@@ -54,12 +54,87 @@
         <p>여기에는 거래 후기가 슬라이드 형태로 보여집니다.</p>
     </section>
 
+<section id="growth-graph" style="padding: 40px 20px; background: #f9f9f9;">
+  <h2 style="text-align:center; font-size: 28px; margin-bottom: 20px;">📈 광고 후 평균 매출 2.3배 이상 증가</h2>
+  <canvas id="salesChart" width="400" height="200"></canvas>
+</section>
+
+<section id="pricing-table" style="padding: 40px 20px; background: #fff;">
+  <h2 style="text-align:center; font-size: 28px; margin-bottom: 20px;">💰 광고 단가 안내</h2>
+  <table style="width: 100%; max-width: 600px; margin: auto; border-collapse: collapse; font-size: 18px;">
+    <thead>
+      <tr style="background-color: #4CAF50; color: white;">
+        <th style="padding: 12px; border: 1px solid #ddd;">상품</th>
+        <th style="padding: 12px; border: 1px solid #ddd;">횟수</th>
+        <th style="padding: 12px; border: 1px solid #ddd;">가격</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">단발성 1회</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">1회</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">220,000원</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">1개월</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">6회</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">1,200,000원</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">3개월</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">18회</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">3,300,000원</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">6개월</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">36회</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">6,000,000원</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">1년</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">72회</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">11,000,000원</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
     <!-- 고정된 우측 상단 연락처, 카카오톡 아이디, 문의 버튼 -->
     <div class="fixed-contact">
         <p>연락처: 010-xxxx-xxxx</p>
         <p>카카오톡 아이디: @xxxx</p>
         <a href="https://open.kakao.com/o/sVxkF2xh" target="_blank">문의하기</a>
     </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('salesChart').getContext('2d');
+  const salesChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['광고 전', '광고 후'],
+      datasets: [{
+        label: '매출 변화',
+        data: [100, 230], // 2.3배 증가
+        backgroundColor: ['#ff6384', '#36a2eb'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            callback: function(value) {
+              return value + '%';
+            }
+          }
+        }
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
