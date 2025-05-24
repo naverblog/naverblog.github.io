@@ -222,18 +222,34 @@
       </table>
     </section>
 
-    <footer id="contact">
-    <p>문의: <a href="tel:+82-10-1234-5678">010-1234-5678</a> | 카카오톡 상담: <a href="https://open.kakao.com/o/gklb1whc">카카오톡 상담 바로가기</a></p>
+<footer id="contact">
+    <p>
+        문의: <a href="tel:+82-10-1234-5678" class="phone">010-1234-5678</a> |
+        카카오톡 상담: <a href="https://open.kakao.com/o/gklb1whc" class="kakao">카카오톡 상담 바로가기</a>
+    </p>
 </footer>
 
 <style>
     #contact {
-        position: relative; /* 기본은 상대 위치 */
+        position: relative;
         bottom: 0;
         width: 100%;
-        background-color: #f1f1f1;
+        background-color: #000; /* 검은색 배경 */
         text-align: center;
         padding: 20px 0;
+        color: white; /* 기본 글자색 흰색 */
+    }
+
+    #contact a {
+        text-decoration: none;
+    }
+
+    .phone {
+        color: #3498db; /* 파란색 */
+    }
+
+    .kakao {
+        color: #f1c40f; /* 노란색 */
     }
 </style>
 
