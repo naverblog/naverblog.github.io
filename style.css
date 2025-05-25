@@ -91,9 +91,8 @@ footer {
 .auto-slider {
   position: relative;
   width: 100%;
-  max-width: 1200px; /* 더 크게 설정 가능 */
+  max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
   text-align: center;
 }
 
