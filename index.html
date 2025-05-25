@@ -390,17 +390,20 @@
         <a href="https://open.kakao.com/o/s0LpiLxh" target="_blank">문의하기</a>
     </div>
     
+<!-- 자동 슬라이드를 위한 JavaScript -->
 <script>
-  const slides = document.querySelectorAll('.auto-slider .slide');
-  let current = 0;
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide');
 
-  function showNextSlide() {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
   }
 
-  setInterval(showNextSlide, 3000); // 3초마다 다음 슬라이드로 이동
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }, 3000); // 3초마다 자동 전환
 </script>
 
 </body>
