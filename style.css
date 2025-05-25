@@ -77,6 +77,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 .auto-slider {
   position: relative;
   width: 100%;
@@ -91,15 +92,19 @@ footer {
 .auto-slider {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  overflow: hidden;
 }
 
 .slide {
   display: none;
+  width: auto;
   max-width: 100%;
+  max-height: 90vh;  /* 브라우저 화면 높이의 90%까지만 표시 */
   height: auto;
+  object-fit: contain; /* 잘리지 않게 이미지 비율 유지 */
   margin: 0 auto;
 }
 
