@@ -96,10 +96,16 @@
         </nav>
     </header>
 
-    <!-- 블로그 포스팅 예시 + 카톡 대화 내용 -->
-    <section id="page1">
-        <h2>블로그 포스팅 예시</h2>
-        <p>여기에는 네이버 블로그 포스팅 예시가 들어갑니다.</p>
+<!-- 블로그 포스팅 예시 자동 슬라이드 -->
+<h2>블로그 포스팅 예시</h2>
+<div class="auto-slider">
+  <img src="images/blog1.jpg" alt="블로그 예시 1" class="slide active">
+  <img src="images/blog2.jpg" alt="블로그 예시 2" class="slide">
+  <img src="images/blog3.jpg" alt="블로그 예시 3" class="slide">
+  <img src="images/blog4.jpg" alt="블로그 예시 4" class="slide">
+  <img src="images/blog5.jpg" alt="블로그 예시 5" class="slide">
+  <img src="images/blog6.jpg" alt="블로그 예시 6" class="slide">
+</div>
 
         <h2>카카오톡 대화 내용</h2>
         <p>여기에는 카카오톡 대화 예시가 들어갑니다.</p>
@@ -383,6 +389,19 @@
         <p>카카오톡 아이디: @xxxx</p>
         <a href="https://open.kakao.com/o/s0LpiLxh" target="_blank">문의하기</a>
     </div>
+    
+<script>
+  const slides = document.querySelectorAll('.auto-slider .slide');
+  let current = 0;
+
+  function showNextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 3000); // 3초마다 다음 슬라이드로 이동
+</script>
 
 </body>
 </html>
