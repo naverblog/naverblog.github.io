@@ -399,13 +399,13 @@
         <a href="https://open.kakao.com/o/s0LpiLxh" target="_blank">문의하기</a>
     </div>
     
-<!-- 자동 슬라이드를 위한 JavaScript -->
 <script>
-  let currentIndex = 0;
-  const slides = document.querySelectorAll('.slide');
+  // 첫 번째 슬라이더
+  let currentIndex1 = 0;
+  const slides1 = document.querySelectorAll('#slider1 .slide');
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
+  function showSlide1(index) {
+    slides1.forEach((slide, i) => {
       slide.classList.remove('active');
       if (i === index) {
         slide.classList.add('active');
@@ -413,12 +413,32 @@
     });
   }
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
+  function nextSlide1() {
+    currentIndex1 = (currentIndex1 + 1) % slides1.length;
+    showSlide1(currentIndex1);
   }
 
-  setInterval(nextSlide, 3000); // 3초마다 자동 전환
+  setInterval(nextSlide1, 3000); // 첫 번째 슬라이더 3초마다 자동 전환
+
+  // 두 번째 슬라이더
+  let currentIndex2 = 0;
+  const slides2 = document.querySelectorAll('#slider2 .slide');
+
+  function showSlide2(index) {
+    slides2.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  function nextSlide2() {
+    currentIndex2 = (currentIndex2 + 1) % slides2.length;
+    showSlide2(currentIndex2);
+  }
+
+  setInterval(nextSlide2, 3000); // 두 번째 슬라이더 3초마다 자동 전환
 </script>
 
 </body>
