@@ -92,22 +92,22 @@ footer {
 /* 자동 슬라이드 전체 컨테이너 */
 .auto-slider {
   width: 100%;
-  max-width: none;
+  max-width: 100%;
   margin: 0 auto;
-  position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000; /* 배경색 설정 (선택사항) */
+  background-color: #000;
 }
 
 .slide {
   display: none;
-  width: 100vw;         /* 화면 가로 전체 사용 */
+  max-width: 100%;
   height: auto;
-  max-height: none;
-  object-fit: contain;  /* 세로 맞춤 유지 */
+  aspect-ratio: 16 / 9; /* 비율 고정 */
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .slide.active {
