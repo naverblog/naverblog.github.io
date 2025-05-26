@@ -396,14 +396,20 @@
   const slides = document.querySelectorAll('.slide');
 
   function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
   }
 
-  setInterval(() => {
+  function nextSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
-  }, 3000); // 3초마다 자동 전환
+  }
+
+  setInterval(nextSlide, 3000); // 3초마다 자동 전환
 </script>
 
 </body>
