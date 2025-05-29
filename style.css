@@ -128,16 +128,24 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
-  padding: 0 20px;
-  flex-wrap: nowrap; /* 좌우 배치 고정 */
+  gap: 10px; /* 여백 줄임 */
+  padding: 0 10px;
+  flex-wrap: nowrap;
 }
 
 .slider {
-  width: 48%; /* 좌우 각각 차지 */
+  width: 49%; /* 크기 키움 */
   position: relative;
   overflow: hidden;
-  min-height: 200px;
+  min-height: 250px; /* 높이 여유 있게 */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .slide {
