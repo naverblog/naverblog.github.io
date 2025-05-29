@@ -127,15 +127,16 @@ footer {
 .slider-container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
   padding: 0 20px;
 }
 
 .slider {
   position: relative;
-  width: 100%;
-  max-width: 350px;
+  flex: 1;
+  min-width: 300px;
+  margin: 0 auto;
   overflow: hidden;
   min-height: 200px;
 }
