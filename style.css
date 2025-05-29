@@ -127,16 +127,15 @@ footer {
 .slider-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 20px;
-  flex-wrap: wrap;
   padding: 0 20px;
+  flex-wrap: nowrap; /* 좌우 배치 고정 */
 }
 
 .slider {
+  width: 48%; /* 좌우 각각 차지 */
   position: relative;
-  flex: 1;
-  min-width: 300px;
-  margin: 0 auto;
   overflow: hidden;
   min-height: 200px;
 }
@@ -166,5 +165,9 @@ footer {
   .slider-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .slider {
+    width: 100%;
   }
 }
