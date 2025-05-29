@@ -119,17 +119,15 @@
 <section>
   <h2>카카오톡 상담 내역</h2>
   <div class="slider-container">
-    <!-- 왼쪽 슬라이더 -->
-    <div class="auto-slider" id="kakao-left-slider">
+    <div class="auto-slider" id="slider3-slider">
   <img src="images/kko9.jpg" class="slide active">
   <img src="images/kko10.jpg" class="slide">
   <img src="images/kko11.jpg" class="slide">
   <img src="images/kko12.jpg" class="slide">
   <img src="images/kko13.jpg" class="slide">
 </div>
-    <!-- 오른쪽 슬라이더 -->
-<div class="auto-slider" id="kakao-right-slider">
-  <img src="images/kko1.jpg" class=slide active">
+<div class="auto-slider" id="slider4-slider">
+  <img src="images/kko1.jpg" class="slide active">
   <img src="images/kko2.jpg" class="slide">
   <img src="images/kko3.jpg" class="slide">
   <img src="images/kko4.jpg" class="slide">
@@ -458,42 +456,47 @@
   }
 
   setInterval(nextSlide2, 3000); // 두 번째 슬라이더 3초마다 자동 전환
-</script>
 
-    <!-- 자동 슬라이드 JS -->
-<script>
-  // 왼쪽 슬라이더 (kko9~13)
-  let kakaoLeftIndex = 0;
-  const kakaoLeftSlides = document.querySelectorAll('.kko-left-slide');
+  // 세 번째 슬라이더
+  let currentIndex3 = 0;
+  const slides3 = document.querySelectorAll('#slider3 .slide');
 
-  function showKakaoLeftSlide(index) {
-    kakaoLeftSlides.forEach((slide, i) => {
+  function showSlide3(index) {
+    slides3.forEach((slide, i) => {
       slide.classList.remove('active');
-      if (i === index) slide.classList.add('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
     });
   }
 
-  setInterval(() => {
-    kakaoLeftIndex = (kakaoLeftIndex + 1) % kakaoLeftSlides.length;
-    showKakaoLeftSlide(kakaoLeftIndex);
-  }, 3000);
+  function nextSlide3() {
+    currentIndex3 = (currentIndex3 + 1) % slides3.length;
+    showSlide3(currentIndex3);
+  }
 
-  // 오른쪽 슬라이더 (kko1~8)
-  let kakaoRightIndex = 0;
-  const kakaoRightSlides = document.querySelectorAll('.kko-right-slide');
+  setInterval(nextSlide3, 3000); // 세 번째 슬라이더 3초마다 자동 전환
+      
+  // 네 번째 슬라이더
+  let currentIndex4 = 0;
+  const slides4 = document.querySelectorAll('#slider4 .slide');
 
-  function showKakaoRightSlide(index) {
-    kakaoRightSlides.forEach((slide, i) => {
+  function showSlide4(index) {
+    slides4.forEach((slide, i) => {
       slide.classList.remove('active');
-      if (i === index) slide.classList.add('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
     });
   }
 
-  setInterval(() => {
-    kakaoRightIndex = (kakaoRightIndex + 1) % kakaoRightSlides.length;
-    showKakaoRightSlide(kakaoRightIndex);
-  }, 3000);
-</script>
+  function nextSlide4() {
+    currentIndex4 = (currentIndex4 + 1) % slides4.length;
+    showSlide4(currentIndex4);
+  }
 
+  setInterval(nextSlide4, 3000); // 네 번째 슬라이더 3초마다 자동 전환
+</script>
+      
 </body>
 </html>
