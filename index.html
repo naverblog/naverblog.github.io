@@ -466,42 +466,36 @@
     <!-- 자동 슬라이드 JS -->
 <script>
   // 왼쪽 슬라이더 (kko9~13)
-  let kakaoIndexLeft = 0;
-  const kakaoSlidesLeft = document.querySelectorAll('#kakaoSliderLeft .slide');
+  let kakaoLeftIndex = 0;
+  const kakaoLeftSlides = document.querySelectorAll('.kko-left-slide');
 
-  function showKakaoSlideLeft(index) {
-    kakaoSlidesLeft.forEach((slide, i) => {
+  function showKakaoLeftSlide(index) {
+    kakaoLeftSlides.forEach((slide, i) => {
       slide.classList.remove('active');
       if (i === index) slide.classList.add('active');
     });
   }
 
-  function nextKakaoSlideLeft() {
-    kakaoIndexLeft = (kakaoIndexLeft + 1) % kakaoSlidesLeft.length;
-    showKakaoSlideLeft(kakaoIndexLeft);
-  }
-
-  setInterval(nextKakaoSlideLeft, 3000);
-  showKakaoSlideLeft(kakaoIndexLeft);
+  setInterval(() => {
+    kakaoLeftIndex = (kakaoLeftIndex + 1) % kakaoLeftSlides.length;
+    showKakaoLeftSlide(kakaoLeftIndex);
+  }, 3000);
 
   // 오른쪽 슬라이더 (kko1~8)
-  let kakaoIndexRight = 0;
-  const kakaoSlidesRight = document.querySelectorAll('#kakaoSliderRight .slide');
+  let kakaoRightIndex = 0;
+  const kakaoRightSlides = document.querySelectorAll('.kko-right-slide');
 
-  function showKakaoSlideRight(index) {
-    kakaoSlidesRight.forEach((slide, i) => {
+  function showKakaoRightSlide(index) {
+    kakaoRightSlides.forEach((slide, i) => {
       slide.classList.remove('active');
       if (i === index) slide.classList.add('active');
     });
   }
 
-  function nextKakaoSlideRight() {
-    kakaoIndexRight = (kakaoIndexRight + 1) % kakaoSlidesRight.length;
-    showKakaoSlideRight(kakaoIndexRight);
-  }
-
-  setInterval(nextKakaoSlideRight, 3000);
-  showKakaoSlideRight(kakaoIndexRight);
+  setInterval(() => {
+    kakaoRightIndex = (kakaoRightIndex + 1) % kakaoRightSlides.length;
+    showKakaoRightSlide(kakaoRightIndex);
+  }, 3000);
 </script>
 
 </body>
