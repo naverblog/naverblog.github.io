@@ -128,16 +128,17 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 10px; /* 여백 줄임 */
-  padding: 0 10px;
-  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 0 20px;
+  width: 100%; /* 부모 컨테이너의 크기 확실히 지정 */
+  flex-wrap: nowrap; /* 강제로 상하로 배치되지 않도록 설정 */
 }
 
 .slider {
-  width: 49%; /* 크기 키움 */
+  width: 49%; /* 좌우 각각 50% 미만으로 크기 조정 */
   position: relative;
   overflow: hidden;
-  min-height: 250px; /* 높이 여유 있게 */
+  min-height: 300px; /* 슬라이더 높이를 충분히 확보 */
 }
 
 .slide img {
@@ -176,6 +177,7 @@ footer {
   }
 
   .slider {
-    width: 100%;
+    width: 100%; /* 모바일에서는 하나씩 쭉 나열 */
+    margin-bottom: 20px; /* 모바일에서 아래쪽 여백 추가 */
   }
 }
