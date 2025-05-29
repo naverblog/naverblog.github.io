@@ -130,15 +130,15 @@ footer {
   align-items: flex-start;
   gap: 20px;
   padding: 0 20px;
-  width: 100%; /* 전체 너비를 100%로 지정 */
+  width: 100%; /* 전체 너비를 100%로 설정 */
   flex-wrap: nowrap; /* 상하로 배치되지 않도록 설정 */
 }
 
 .slider {
-  width: 48%; /* 좌우 두 개의 슬라이더가 나란히 보이도록 설정 */
+  width: 50%; /* 각 슬라이더의 너비를 50%로 설정하여 크기를 키움 */
   position: relative;
   overflow: hidden;
-  min-height: 300px; /* 높이 설정 */
+  min-height: 400px; /* 슬라이더의 최소 높이를 400px로 늘림 */
 }
 
 .slide img {
