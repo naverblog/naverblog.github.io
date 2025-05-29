@@ -78,85 +78,50 @@ footer {
     width: 100%;
 }
 
-.auto-slider {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  height: 350px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* 두 개의 슬라이더를 나란히 배치할 수 있는 컨테이너 */
+/* 슬라이더 컨테이너 */
 .slider-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* 슬라이더 사이 간격 */
-  flex-wrap: wrap; /* 작은 화면에서 아래로 떨어지도록 */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* 슬라이더 사이 간격 */
+    width: 100%; /* 전체 너비를 100%로 설정 */
+    flex-wrap: nowrap; /* 슬라이더가 한 줄에 배치되도록 설정 */
 }
 
 /* 각 자동 슬라이더 박스 */
 .auto-slider {
-  width: 48%;
-  max-width: 600px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-  position: relative;
-  border-radius: 8px;
+    flex: 1; /* 각 슬라이더가 가능한 최대 공간을 차지하도록 설정 */
+    max-width: 48%; /* 두 슬라이더가 좌우로 배치되도록 48%로 설정 */
+    position: relative;
+    overflow: hidden;
+    height: 350px; /* 고정된 높이 설정 */
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .slide {
-  display: none;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9; /* 비율 고정 */
-  object-fit: contain;
-  border-radius: 8px;
+    display: none;
+    width: 100%; /* 슬라이더 이미지가 슬라이더 크기에 맞게 꽉 차도록 설정 */
+    height: 100%;
+    object-fit: cover; /* 이미지가 비율을 유지하면서 영역을 꽉 채우도록 설정 */
+    display: block;
+    border-radius: 8px;
 }
 
 .slide.active {
-  display: block;
+    display: block;
 }
 
-<!-- CSS 스타일 -->
-.slider-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch; /* 부모 요소의 높이에 맞게 늘어나도록 설정 */
-  gap: 20px;
-  width: 100%; /* 전체 너비를 100%로 설정 */
-  flex-wrap: nowrap; /* 상하로 배치되지 않도록 설정 */
-}
-
-.slider {
-  width: 48%; /* 각 슬라이더의 너비를 48%로 설정하여 좌우로 나란히 보이게 함 */
-  position: relative;
-  overflow: hidden;
-  height: 400px; /* 고정된 높이 설정, 높이를 키워서 이미지 크기 증가 */
-}
-
-.slide img {
-  width: 100%; /* 이미지의 너비를 100%로 설정하여 슬라이더의 크기에 맞게 꽉 차게 */
-  height: 100%; /* 이미지의 높이를 100%로 설정하여 슬라이더의 크기와 일치하도록 */
-  object-fit: cover; /* 이미지가 비율을 유지하면서 영역을 꽉 채우도록 설정 */
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
+/* 모바일 화면에서 슬라이더 설정 */
 @media (max-width: 768px) {
-  .slider-container {
-    flex-direction: column; /* 모바일에서는 세로로 배치 */
-    align-items: center;
-  }
+    .slider-container {
+        flex-direction: column; /* 모바일에서는 슬라이더가 세로로 배치 */
+        align-items: center;
+    }
 
-  .slider {
-    width: 100%; /* 모바일에서는 각 슬라이더가 100% 차지 */
-    margin-bottom: 20px; /* 각 슬라이더 사이에 여백 추가 */
-  }
+    .auto-slider {
+        width: 100%; /* 모바일에서는 각 슬라이더가 100% 차지 */
+        height: 300px; /* 모바일 화면에서 슬라이더 높이를 줄임 */
+        margin-bottom: 20px;
+    }
 }
