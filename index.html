@@ -442,126 +442,35 @@
     </div>
     
 <script>
-  // 첫 번째 슬라이더
-  let currentIndex1 = 0;
-  const slides1 = document.querySelectorAll('#slider1 .slide');
+  // 슬라이드 전환 함수
+  function createSlider(sliderId, intervalTime = 3000) {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(`#${sliderId} .slide`);
 
-  function showSlide1(index) {
-    slides1.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-      }
-    });
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, intervalTime);
   }
 
-  function nextSlide1() {
-    currentIndex1 = (currentIndex1 + 1) % slides1.length;
-    showSlide1(currentIndex1);
-  }
-
-  setInterval(nextSlide1, 3000);
-
-  // 두 번째 슬라이더
-  let currentIndex2 = 0;
-  const slides2 = document.querySelectorAll('#slider2 .slide');
-
-  function showSlide2(index) {
-    slides2.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-      }
-    });
-  }
-
-  function nextSlide2() {
-    currentIndex2 = (currentIndex2 + 1) % slides2.length;
-    showSlide2(currentIndex2);
-  }
-
-  setInterval(nextSlide2, 3000);
-
-  // 세 번째 슬라이더
-  let currentIndex3 = 0;
-  const slides3 = document.querySelectorAll('#slider3 .slide');
-
-  function showSlide3(index) {
-    slides3.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-      }
-    });
-  }
-
-  function nextSlide3() {
-    currentIndex3 = (currentIndex3 + 1) % slides3.length;
-    showSlide3(currentIndex3);
-  }
-
-  setInterval(nextSlide3, 3000);
-</script>
-
-  // 네 번째 슬라이더
-  let currentIndex4 = 0;
-  const slides4 = document.querySelectorAll('#slider4 .slide');
-
-  function showSlide4(index) {
-    slides4.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-      }
-    });
-  }
-
-  function nextSlide4() {
-    currentIndex4 = (currentIndex4 + 1) % slides4.length;
-    showSlide4(currentIndex4);
-  }
-
-  setInterval(nextSlide4, 3000); // 세 번째 슬라이더 3초마다 자동 전환
-      
-  // 다섯 번째 슬라이더
-  let currentIndex5 = 0;
-  const slides5 = document.querySelectorAll('#slider5 .slide');
-
-  function showSlide5(index) {
-    slides5.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-      }
-    });
-  }
-
-  function nextSlide5() {
-    currentIndex5 = (currentIndex5 + 1) % slides5.length;
-    showSlide5(currentIndex5);
-  }
-
-  setInterval(nextSlide5, 3000); // 네 번째 슬라이더 3초마다 자동 전환
-
-  // 다섯 번째 슬라이더
-  let currentIndex6 = 0;
-  const slides6 = document.querySelectorAll('#slider6 .slide');
-
-  function showSlide6(index) {
-    slides6.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-      }
-    });
-  }
-
-  function nextSlide5() {
-    currentIndex6 = (currentIndex6 + 1) % slides6.length;
-    showSlide6(currentIndex6);
-  }
-
-  setInterval(nextSlide6, 3000); // 네 번째 슬라이더 3초마다 자동 전환
+  // 각 슬라이더를 생성
+  createSlider('slider1');
+  createSlider('slider2');
+  createSlider('slider3');
+  createSlider('slider4');
+  createSlider('slider5');
+  createSlider('slider6');
 </script>
       
 </body>
