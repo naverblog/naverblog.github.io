@@ -99,6 +99,7 @@
 
 <h2>블로그 포스팅 예시</h2>
 <div class="slider-container">
+  <!-- 첫 번째 슬라이더 -->
   <div class="auto-slider" id="slider1">
     <img src="images/blog1.jpg" alt="네이버 블로그 포스팅 예시 01" class="slide active">
     <img src="images/blog2.jpg" alt="네이버 블로그 포스팅 예시 02" class="slide">
@@ -107,6 +108,8 @@
     <img src="images/blog5.jpg" alt="네이버 블로그 포스팅 예시 05" class="slide">
     <img src="images/blog6.jpg" alt="네이버 블로그 포스팅 예시 06" class="slide">
   </div>
+
+  <!-- 두 번째 슬라이더 -->
   <div class="auto-slider" id="slider2">
     <img src="images/blog7.jpg" alt="네이버 블로그 포스팅 예시 07" class="slide active">
     <img src="images/blog8.jpg" alt="네이버 블로그 포스팅 예시 08" class="slide">
@@ -114,20 +117,31 @@
     <img src="images/blog10.jpg" alt="네이버 블로그 포스팅 예시 10" class="slide">
     <img src="images/blog11.jpg" alt="네이버 블로그 포스팅 예시 11" class="slide">
   </div>
-</div>
 
+  <!-- 세 번째 슬라이더 추가 -->
+  <div class="auto-slider" id="slider3">
+    <img src="images/blog12.jpg" alt="네이버 블로그 포스팅 예시 12" class="slide active">
+    <img src="images/blog13.jpg" alt="네이버 블로그 포스팅 예시 13" class="slide">
+    <img src="images/blog14.jpg" alt="네이버 블로그 포스팅 예시 14" class="slide">
+    <img src="images/blog15.jpg" alt="네이버 블로그 포스팅 예시 15" class="slide">
+    <img src="images/blog16.jpg" alt="네이버 블로그 포스팅 예시 16" class="slide">
+    <img src="images/blog17.jpg" alt="네이버 블로그 포스팅 예시 17" class="slide">
+  </div>
+</div>
+    
 <!-- 카카오톡 상담 내역 자동 슬라이더 (좌우 2개) -->
 <section>
   <h2>카카오톡 상담 내역</h2>
   <div class="slider-container">
-    <div class="auto-slider" id="slider3-slider">
+    <div class="auto-slider" id="slider4-slider">
       <img src="images/kko9.jpg" alt="카카오톡 상담 01" class="slide active">
       <img src="images/kko10.jpg" alt="카카오톡 상담 01" class="slide">
       <img src="images/kko11.jpg" alt="카카오톡 상담 03" class="slide">
       <img src="images/kko12.jpg" alt="카카오톡 상담 04" class="slide">
       <img src="images/kko13.jpg" alt="카카오톡 상담 05" class="slide">
     </div>
-    <div class="auto-slider" id="slider4-slider">
+      
+    <div class="auto-slider" id="slider5-slider">
       <img src="images/kko1.jpg" alt="카카오톡 상담 06" class="slide active">
       <img src="images/kko2.jpg" alt="카카오톡 상담 07" class="slide">
       <img src="images/kko3.jpg" alt="카카오톡 상담 08" class="slide">
@@ -136,6 +150,14 @@
       <img src="images/kko6.jpg" alt="카카오톡 상담 11" class="slide">
       <img src="images/kko7.jpg" alt="카카오톡 상담 12" class="slide">
       <img src="images/kko8.jpg" alt="카카오톡 상담 13" class="slide">
+    </div>
+      
+    <div class="auto-slider" id="slider6-slider">
+      <img src="images/kko14.jpg" alt="카카오톡 상담 14" class="slide active">
+      <img src="images/kko15.jpg" alt="카카오톡 상담 15" class="slide">
+      <img src="images/kko16.jpg" alt="카카오톡 상담 16" class="slide">
+      <img src="images/kko17.jpg" alt="카카오톡 상담 17" class="slide">
+      <img src="images/kko18.jpg" alt="카카오톡 상담 18" class="slide">
     </div>
   </div>
 </section>
@@ -438,7 +460,7 @@
     showSlide1(currentIndex1);
   }
 
-  setInterval(nextSlide1, 3000); // 첫 번째 슬라이더 3초마다 자동 전환
+  setInterval(nextSlide1, 3000);
 
   // 두 번째 슬라이더
   let currentIndex2 = 0;
@@ -458,7 +480,7 @@
     showSlide2(currentIndex2);
   }
 
-  setInterval(nextSlide2, 3000); // 두 번째 슬라이더 3초마다 자동 전환
+  setInterval(nextSlide2, 3000);
 
   // 세 번째 슬라이더
   let currentIndex3 = 0;
@@ -478,8 +500,9 @@
     showSlide3(currentIndex3);
   }
 
-  setInterval(nextSlide3, 3000); // 세 번째 슬라이더 3초마다 자동 전환
-      
+  setInterval(nextSlide3, 3000);
+</script>
+
   // 네 번째 슬라이더
   let currentIndex4 = 0;
   const slides4 = document.querySelectorAll('#slider4 .slide');
@@ -498,7 +521,47 @@
     showSlide4(currentIndex4);
   }
 
-  setInterval(nextSlide4, 3000); // 네 번째 슬라이더 3초마다 자동 전환
+  setInterval(nextSlide4, 3000); // 세 번째 슬라이더 3초마다 자동 전환
+      
+  // 다섯 번째 슬라이더
+  let currentIndex5 = 0;
+  const slides5 = document.querySelectorAll('#slider5 .slide');
+
+  function showSlide5(index) {
+    slides5.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  function nextSlide5() {
+    currentIndex5 = (currentIndex5 + 1) % slides5.length;
+    showSlide5(currentIndex5);
+  }
+
+  setInterval(nextSlide5, 3000); // 네 번째 슬라이더 3초마다 자동 전환
+
+  // 다섯 번째 슬라이더
+  let currentIndex6 = 0;
+  const slides6 = document.querySelectorAll('#slider6 .slide');
+
+  function showSlide6(index) {
+    slides6.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  function nextSlide5() {
+    currentIndex6 = (currentIndex6 + 1) % slides6.length;
+    showSlide6(currentIndex6);
+  }
+
+  setInterval(nextSlide6, 3000); // 네 번째 슬라이더 3초마다 자동 전환
 </script>
       
 </body>
