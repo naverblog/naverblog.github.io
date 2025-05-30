@@ -91,7 +91,7 @@ footer {
 .auto-slider {
   flex: 1;
   max-width: 32%;
-  height: 300px; /* ✅ 높이 명시 추가 */
+  height: auto; /* 높이를 자동으로 조정하여 이미지 비율을 유지 */
   overflow: hidden;
   border-radius: 8px;
   background-color: #000;
