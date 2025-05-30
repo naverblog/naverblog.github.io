@@ -90,7 +90,7 @@ footer {
 
 .auto-slider {
   flex: 1;
-  max-width: 49%;
+  max-width: 32%; /* 3개 슬라이더 대응 */
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 8px;
