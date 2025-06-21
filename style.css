@@ -104,11 +104,15 @@ footer {
 
 /* 슬라이드 */
 .slide {
+  display: none;
   width: 100%;
-  height: auto;
-  object-fit: contain; /* cover → contain 으로 변경 */
+  height: auto; /* 이미지 비율 유지 */
+  object-fit: contain; /* 이미지 비율 왜곡 없이 보여줌 */
+  border-radius: 8px;
+  transition: opacity 1s ease-in-out;
   max-width: 100%;
 }
+
 .slide.active {
   display: block;
   opacity: 1;
@@ -120,18 +124,19 @@ footer {
 
 /* 모바일 화면에서 슬라이더 설정 */
 @media (max-width: 768px) {
+  .slider-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .auto-slider {
     width: 100%;
-    height: auto;
+    height: auto; /* height: 100vh 제거! */
+    margin-bottom: 20px;
   }
 
   .slide {
     height: auto;
-  }
-}
-  .auto-slider {
-    width: 100%; /* 모바일에서는 각 슬라이더가 100% 차지 */
-    height: 100vh; /* 모바일에서 슬라이더가 화면 높이를 100% 차지 */
-    margin-bottom: 20px;
+    object-fit: contain;
   }
 }
