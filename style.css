@@ -104,14 +104,11 @@ footer {
 
 /* 슬라이드 */
 .slide {
-  display: none;
   width: 100%;
-  height: 100%;
-  object-fit: cover;  /* 이미지를 꽉 채우기 위해 'cover' 사용 */
-  border-radius: 8px;
-  transition: opacity 1s ease-in-out;
+  height: auto;
+  object-fit: contain; /* cover → contain 으로 변경 */
+  max-width: 100%;
 }
-
 .slide.active {
   display: block;
   opacity: 1;
@@ -123,11 +120,15 @@ footer {
 
 /* 모바일 화면에서 슬라이더 설정 */
 @media (max-width: 768px) {
-  .slider-container {
-    flex-direction: column; /* 모바일에서는 슬라이더가 세로로 배치 */
-    align-items: center;
+  .auto-slider {
+    width: 100%;
+    height: auto;
   }
 
+  .slide {
+    height: auto;
+  }
+}
   .auto-slider {
     width: 100%; /* 모바일에서는 각 슬라이더가 100% 차지 */
     height: 100vh; /* 모바일에서 슬라이더가 화면 높이를 100% 차지 */
