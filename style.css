@@ -123,11 +123,19 @@ footer {
 }
 
 /* 모바일 화면에서 슬라이더 설정 */
-/* 모바일 슬라이더 비율 문제 해결 CSS */
+.slider-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
 
-/* 공통 설정 */
 .auto-slider {
   flex: 1;
+  max-width: 32%;
+  aspect-ratio: 4 / 3; /* 비율 고정 */
   overflow: hidden;
   border-radius: 8px;
   background-color: #000;
@@ -139,13 +147,12 @@ footer {
 }
 
 .slide {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain;
-  transition: opacity 1s ease-in-out;
   display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 비율 유지하며 꽉 차게 */
   border-radius: 8px;
+  transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
@@ -157,23 +164,18 @@ footer {
   opacity: 0;
 }
 
-/* 모바일 대응 */
+/* 모바일 화면 대응 */
 @media (max-width: 768px) {
   .slider-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
   }
 
   .auto-slider {
     width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3;
-  }
-
-  .slide {
-    height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 3; /* 동일한 비율 유지 */
+    max-height: auto;
+    margin-bottom: 20px;
   }
 }
 
