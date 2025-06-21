@@ -123,6 +123,7 @@ footer {
 }
 
 /* 모바일 화면에서 슬라이더 설정 */
+/* 슬라이더 컨테이너 */
 .slider-container {
   display: flex;
   justify-content: space-between;
@@ -130,6 +131,7 @@ footer {
   gap: 20px;
   width: 100%;
   flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .auto-slider {
@@ -146,11 +148,12 @@ footer {
   position: relative;
 }
 
+/* 슬라이드 이미지 */
 .slide {
   display: none;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* 비율 유지하며 꽉 차게 */
+  object-fit: contain; /* 이미지가 잘리지 않도록 */
   border-radius: 8px;
   transition: opacity 1s ease-in-out;
 }
@@ -164,7 +167,7 @@ footer {
   opacity: 0;
 }
 
-/* 모바일 화면 대응 */
+/* 모바일 대응 */
 @media (max-width: 768px) {
   .slider-container {
     flex-direction: column;
@@ -173,22 +176,14 @@ footer {
 
   .auto-slider {
     width: 100%;
-    aspect-ratio: 4 / 3; /* 동일한 비율 유지 */
-    max-height: auto;
+    max-width: 100%;
+    aspect-ratio: 4 / 3; /* 모바일에서도 비율 유지 */
     margin-bottom: 20px;
-  }
-}
-
-/* PC에서는 고정 비율 유지 */
-@media (min-width: 769px) {
-  .auto-slider {
-    max-width: 32%;
-    height: auto;
-    aspect-ratio: 4 / 3;
   }
 
   .slide {
+    width: 100%;
     height: auto;
-    aspect-ratio: 4 / 3;
+    object-fit: contain;
   }
 }
